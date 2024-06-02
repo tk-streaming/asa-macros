@@ -13,17 +13,19 @@ cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemR
 cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Rex.PrimalItemResource_ApexDrop_Rex'" 15 1 false
 cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Yuty.PrimalItemResource_ApexDrop_Yuty'" 10 1 false
 
-cheat GFI PrimalItemArmor_MantisSaddle_C 1 20 false
+cheat GFI PrimalItemArmor_MantisSaddle_C 1 30 false
 cheat GMSummon "Mantis_Character_BP_C" 180
+cheat GFI PrimalItemConsumable_SpoiledMeat_C 100 1 false
+cheat GFI PrimalItemConsumable_SpoiledMeat_C 100 1 false
 
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSword.PrimalItem_WeaponSword'" 1 20 false
-cheat GFI PrimalItem_WeaponStoneClub_C 1 20 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSword.PrimalItem_WeaponSword'" 1 30 false
+cheat GFI PrimalItem_WeaponStoneClub_C 1 30 false
 
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalShirt.PrimalItemArmor_MetalShirt'" 1 20 false
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalGloves.PrimalItemArmor_MetalGloves'" 1 20 false
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalPants.PrimalItemArmor_MetalPants'" 1 20 false
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalHelmet.PrimalItemArmor_MetalHelmet'" 1 20 false
-cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalBoots.PrimalItemArmor_MetalBoots'" 1 20 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalShirt.PrimalItemArmor_MetalShirt'" 1 30 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalGloves.PrimalItemArmor_MetalGloves'" 1 30 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalPants.PrimalItemArmor_MetalPants'" 1 30 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalHelmet.PrimalItemArmor_MetalHelmet'" 1 30 false
+cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MetalBoots.PrimalItemArmor_MetalBoots'" 1 30 false
 
 cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_HealSoup.PrimalItemConsumable_HealSoup'" 100 1 false
 cheat GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_HealSoup.PrimalItemConsumable_HealSoup'" 100 1 false
