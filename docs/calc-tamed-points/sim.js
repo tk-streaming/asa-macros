@@ -19,8 +19,14 @@ function calcPD() {
     const bonusPoint = (eLevelAfterTame.value - eLevelBeforeTame.value);
     
     const labels = Array.from(Array(bonusPoint)).map((_,k) => k + Number(ePointsBeforeTame.value));
-    const data = Array.from(Array(bonusPoint)).map((_, k) => binom(1.0/L, bonusPoint, k));
-
+    const pd = Array.from(Array(bonusPoint)).map((_, k) => binom(1.0/L, bonusPoint, k));
+    let sd = [];
+    let s = 0;
+    for(let i = 0; i<pd.length; i++) {
+      s = s + pd[pd.length-i-1];
+      sd.push(s);
+    }
+    sd = sd.reverse();
     const chart = document.getElementById("chart");
     chart.innerHTML = "";
     const canv = document.createElement("canvas");
@@ -29,16 +35,34 @@ function calcPD() {
       type: 'bar',
       data: {
         labels: labels,
-        datasets: [{
-          label: 'Probability',
-          data: data,
-          borderWidth: 1
-        }]
+        datasets: [
+          {
+            label: 'Probability',
+            data: pd,
+            borderWidth: 1,
+            yAxisID: "yAxis1",
+          },
+          {
+            label: 'Probability',
+            data: sd,
+            borderWidth: 1,
+            yAxisID: "yAxis2",
+          },
+        ]
       },
       options: {
         scales: {
-          y: {
-            beginAtZero: true
+          yAxis1: {
+            beginAtZero: true,
+            position: "left",
+            max: 0.15,
+            min: 0,
+          },
+          yAxis2: {
+            beginAtZero: true,
+            position: "right",
+            max: 1,
+            min: 0,
           },
           x: {
             max: 70,
@@ -46,14 +70,14 @@ function calcPD() {
           },
         },
         plugins: {
-            tooltip: {
-                callbacks: {
-                    label: function(context) {
-                      const c = 100;
-                      return `${context.dataset.label}: ${Math.round(context.parsed.y * 100 * c) / c}%`;
-                    }
-                }
-            }
+          tooltip: {
+              callbacks: {
+                  label: function(context) {
+                    const c = 100;
+                    return `${context.dataset.label}: ${Math.round(context.parsed.y * 100 * c) / c}%`;
+                  }
+              }
+          }
         }
       }
     });
