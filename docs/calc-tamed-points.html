@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <!-- <link href="index.css" rel="stylesheet"> -->
+        <script src="sim.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div>
+            <label>テイム前のレベル:</label>
+            <input id="levelBeforeTame" type="number" value="150" />
+        </div>
+        <div>
+            <label>テイム前のポイント数:</label>
+            <input id="pointsBeforeTame" type="number" value="0" />
+        </div>
+        <div>
+            <label>テイムボーナス [%]:</label>
+            <input id="tameBonus" type="number" value="100" />
+        </div>
+        <div>
+            <button onclick="calcLevelAfterTame()">テイム後のレベルを計算</buton>
+        </div>
+        <div>
+            <label>テイム後のレベル</label>
+            <input id="levelAfterTame" type="number" value="225" />
+        </div>
+        <div>
+            <button onclick="calcPD()">テイム後のステータスの確率分布を計算</buton>
+        </div>
+        <div id="chart"></div>
+    </body>
+</html>
