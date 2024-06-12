@@ -7,9 +7,12 @@ function calcLevelAfterTame() {
     eLevelAfterTame.value = l;
 }
 
-const L = 6;
 
 function calcPD() {
+    const eDisableOxygen = document.getElementById("disableOxygen");
+
+    const L = eDisableOxygen.checked ? 5 : 6;
+
     const ePointsBeforeTame = document.getElementById("pointsBeforeTame");
     const eLevelBeforeTame = document.getElementById("levelBeforeTame");
     const eLevelAfterTame = document.getElementById("levelAfterTame");
