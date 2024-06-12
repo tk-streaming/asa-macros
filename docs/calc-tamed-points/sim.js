@@ -30,7 +30,7 @@ function calcPD() {
       data: {
         labels: labels,
         datasets: [{
-          label: 'Points after tame',
+          label: 'Probability',
           data: data,
           borderWidth: 1
         }]
