@@ -39,7 +39,21 @@ function calcPD() {
         scales: {
           y: {
             beginAtZero: true
-          }
+          },
+          x: {
+            max: 70,
+            min: 0,
+          },
+        },
+        plugins: {
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                      const c = 100;
+                      return `${context.dataset.label}: ${Math.round(context.parsed.y * 100 * c) / c}%`;
+                    }
+                }
+            }
         }
       }
     });
