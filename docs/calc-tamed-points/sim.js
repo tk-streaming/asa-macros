@@ -55,13 +55,11 @@ function calcPD() {
           yAxis1: {
             beginAtZero: true,
             position: "left",
-            max: 0.15,
             min: 0,
           },
           yAxis2: {
             beginAtZero: true,
             position: "right",
-            max: 1,
             min: 0,
           },
           x: {
