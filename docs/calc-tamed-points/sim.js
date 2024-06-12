@@ -3,7 +3,7 @@ function calcLevelAfterTame() {
     const eLevelBeforeTame = document.getElementById("levelBeforeTame");
     const eTameBonus = document.getElementById("tameBonus");
     const eLevelAfterTame = document.getElementById("levelAfterTame");
-    const l = Math.ceil(Number(eLevelBeforeTame.value) + (0.5 * Number(eLevelBeforeTame.value) * (Number(eTameBonus.value) / 100)))
+    const l = Math.round(Number(eLevelBeforeTame.value) + (0.5 * Number(eLevelBeforeTame.value) * (Number(eTameBonus.value) / 100)))
     eLevelAfterTame.value = l;
 }
 
@@ -37,13 +37,13 @@ function calcPD() {
         labels: labels,
         datasets: [
           {
-            label: 'Probability',
+            label: 'そのポイントになる確率',
             data: pd,
             borderWidth: 1,
             yAxisID: "yAxis1",
           },
           {
-            label: 'Probability',
+            label: 'そのポイント以上になる確率',
             data: sd,
             borderWidth: 1,
             yAxisID: "yAxis2",
