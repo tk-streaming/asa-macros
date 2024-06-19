@@ -7,7 +7,6 @@ function calcLevelAfterTame() {
     eLevelAfterTame.value = l;
 }
 
-
 function calcPD() {
     const eDisableOxygen = document.getElementById("disableOxygen");
 
@@ -81,8 +80,39 @@ function calcPD() {
     });
     
     
+    const table = document.getElementById("table");
+    table.innerHTML = "";
+    const t = document.createElement("table");
+    const htr = document.createElement("tr");
+    const htd1 = document.createElement("th");
+    htd1.innerHTML = "ステータスポイント";
+    htr.appendChild(htd1);
+    const htd2 = document.createElement("th");
+    htd2.innerHTML = "そのポイントになる確率[%]";
+    htr.appendChild(htd2);
+    const htd3 = document.createElement("th");
+    htd3.innerHTML = "そのポイント以上になる確率[%]";
+    htr.appendChild(htd3);
+    t.appendChild(htr);
+    const c = 1000000;
+    for(let i = 0; i < labels.length; i++) {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      td1.innerHTML = labels[i];
+      tr.appendChild(td1);
+      const td2 = document.createElement("td");
+      td2.innerHTML = `${Math.round(pd[i] * 100 * c) / c}%`;
+      tr.appendChild(td2);
+      const td3 = document.createElement("td");
+      td3.innerHTML = `${Math.round(sd[i] * 100 * c) / c}%`;
+      tr.appendChild(td3);
+      t.appendChild(tr);
+    }
+    table.append(t);
 
 }
+
+
 //-------------------------------------------------
 
 function binom(p, n, k) {
