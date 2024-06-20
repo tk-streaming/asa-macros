@@ -88,10 +88,10 @@ function calcPD() {
     htd1.innerHTML = "ステータスポイント";
     htr.appendChild(htd1);
     const htd2 = document.createElement("th");
-    htd2.innerHTML = "そのポイントになる確率[%]";
+    htd2.innerHTML = "そのポイントになる確率";
     htr.appendChild(htd2);
     const htd3 = document.createElement("th");
-    htd3.innerHTML = "そのポイント以上になる確率[%]";
+    htd3.innerHTML = "そのポイント以上になる確率";
     htr.appendChild(htd3);
     t.appendChild(htr);
     const c = 1000000;

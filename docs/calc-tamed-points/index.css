@@ -1,0 +1,14 @@
+th, td {
+  padding: 0.25em;
+}
+
+tr:nth-child(odd) {
+  background-color:  #eeffee;
+}
+tr:nth-child(even) {
+  background-color:  #eeeeff;
+}
+tr:nth-child(1) {
+  background-color:  #eeeeee;
+}
+
