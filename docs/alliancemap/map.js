@@ -39,7 +39,7 @@ function showMap(mapImage, positions = []) {
         const elat = (e.clientY / 640.0) * 100
         const pos = positions.find(pos => pos.long <= elong && elong <= pos.long + 2 && pos.lat <= elat && elat <= pos.lat + 2)
         if (pos) {
-            descDiv.innerText = pos.name
+            descDiv.innerText = `${pos.name} (${pos.lat}, ${pos.long})`
         } else {
             descDiv.innerText = ""
         }
