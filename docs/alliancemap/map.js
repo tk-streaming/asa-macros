@@ -70,7 +70,7 @@ window.addEventListener("load", async () => {
 
     const pins = await fetchGoogleSpreadSheet(spreadSheatId, sheetName, apiKey)
     const positions = pins.values.filter(val => val[0] === mapName && val[1] === serverNumber).map(val => {
-        return { name: val[4], lat: parseFloat(val[3]), long: parseFloat(val[2]), color: val[5] }
+        return { name: val[4], lat: parseFloat(val[2]), long: parseFloat(val[3]), color: val[5] }
     })
 
     mapImage.addEventListener("load", () => {
